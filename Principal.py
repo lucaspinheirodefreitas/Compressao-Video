@@ -6,6 +6,4 @@ from CompressaoFFMPEG import CompressaoFFMPEG
 class Principal(object):
         video_ffmpeg = CompressaoFFMPEG()
         video_ffmpeg.compressaoMPEG()
-        print(video_ffmpeg.tempo)
-        print(video_ffmpeg.tamanho_inicial)
-        print(video_ffmpeg.tamanho_final)
+        Estatisticas(video_ffmpeg.tempo, video_ffmpeg.tamanho_inicial, video_ffmpeg.tamanho_final)
