@@ -1,5 +1,9 @@
 # # -*- coding: utf-8 -*-
 
+import timeit
+import os
+from PathVideos import PathVideos
+
 '''
     Possibilidades de transformação de um video em MPEG, utilizando o comando OS
     de python e escrevendo o comando necessário para rodar o FFMPEG via terminal
@@ -17,10 +21,6 @@
     ffmpeg version 3.2.12-1~deb9u1 Copyright (c) 2000-2018 the FFmpeg developers
 '''
 
-import timeit
-import os
-from PathVideos import PathVideos
-
 class CompressaoFFMPEG(object):
 
     def __init__(self):
@@ -30,6 +30,7 @@ class CompressaoFFMPEG(object):
         self.tamanho_final = 0
 
     def compressaoMPEG(self):
+        self.videos.new_path()
         for i, local in enumerate(self.videos.VIDEOS_ENTRADA):
             self.tamanho_inicial = self.tamanho_video(self.videos.VIDEOS_ENTRADA[i])
             tempo_i = self.calc_timer()
