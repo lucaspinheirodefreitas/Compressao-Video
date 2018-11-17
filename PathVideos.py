@@ -13,7 +13,7 @@ class PathVideos(object):
         numero_videos = input("Digite a quantidade de videos que deseja comprimir: ")
         for i in range(numero_videos):
             self.VIDEOS_ENTRADA.append(self.VIDEO_ENTRADA + str(i+1) + ".mp4")
-            self.VIDEOS_SAIDA.append(self.VIDEO_SAIDA + str(i+1) + ".mp4")
+            self.VIDEOS_SAIDA.append(self.VIDEO_SAIDA + str(i+1))
 
 '''
     for i, num in enumerate(VIDEOS_ENTRADA):
