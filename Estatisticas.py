@@ -7,10 +7,6 @@ class Estatisticas(object):
     def __init__(self, tamanho_inicial, numero_videos):
         self.tamanho_inicial = tamanho_inicial
         self.numero_videos = numero_videos
-        self.tamanho_final_h264 = []
-        self.tempo_h264 = []
-        self.tamanho_final_mpeg4 = []
-        self.tempo_mpeg4 = []
         self.nm_videos = []
     '''
     def imprime_dados(self):
@@ -36,9 +32,9 @@ class Estatisticas(object):
         indice = np.arange(self.numero_videos)
         bar_larg = 0.4
         transp = 0.8
-        plt.bar(indice, tamanho_final_mpeg4, bar_larg, alpha=transp, color="orange", label='compressaoMPEG')
-        plt.bar(indice + bar_larg, tamanho_final_h264, bar_larg, alpha=transp, color="gray", label='compressaoH264')
-
+        plt.bar(indice, tamanho_final_mpeg4, bar_larg/2, alpha=transp, color="gray", label='Compressao MPEG')
+        plt.bar(indice + bar_larg/2, tamanho_final_h264, bar_larg/2, alpha=transp, color="orange", label='Compressao H264')
+        plt.bar(indice + bar_larg, self.tamanho_inicial, bar_larg/2, alpha=transp, color="red", label='Tamanho original')
         plt.xlabel('quantidade de videos')
         plt.ylabel('tamanho do video')
         plt.title('Compressao H264 x MPEG')
