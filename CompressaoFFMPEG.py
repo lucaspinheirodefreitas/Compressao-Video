@@ -42,6 +42,10 @@ class CompressaoFFMPEG(object):
             tempo_f = self.calc_timer()
             self.tamanho_final_mpeg4 = self.tamanho_video(self.videos.VIDEOS_SAIDA[i] + "-mpeg4.mp4")
             self.tempo_mpeg4 = (tempo_f - tempo_i)
+    '''
+    https://trac.ffmpeg.org/wiki/Encode/MPEG-4
+    https://trac.ffmpeg.org/wiki/Encode/H.264
+    '''
 
     def compressaoH264(self):
         for i, local in enumerate(self.videos.VIDEOS_ENTRADA):
