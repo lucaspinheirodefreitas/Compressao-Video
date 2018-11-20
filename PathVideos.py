@@ -14,8 +14,3 @@ class PathVideos(object):
         for i in range(self.numero_videos):
             self.VIDEOS_ENTRADA.append(self.VIDEO_ENTRADA + str(i+1) + ".mp4")
             self.VIDEOS_SAIDA.append(self.VIDEO_SAIDA + str(i+1))
-
-'''
-    for i, num in enumerate(VIDEOS_ENTRADA):
-        print(VIDEOS_ENTRADA[i])
-'''
